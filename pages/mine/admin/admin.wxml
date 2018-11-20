@@ -1,0 +1,18 @@
+<!--pages/mine/admin/admin.wxml-->
+<view>
+<block wx:for="{{pros}}" wx:for-item='pro' wx:key='pro.pid'>
+<view class='pro'>
+<view class='msg'>
+<text>昵称：{{pro.user.nickName}}  </text>
+<text>姓名：{{pro.name}}  </text>
+<text>电话：{{pro.phone}}  </text>
+<text>微信：{{pro.wechat}}  </text>
+<text>简介：{{pro.brief}}  </text>
+</view>
+<view class='btns'>
+  <button class='ok' hover-class="press_sub" bindtap="agree" size="mini" data-index="{{index}}" data-pid="{{pro.pid}}" data-openid="{{pro.openId}}" data-stats='1'>同意</button>
+    <button class='refus' bindtap="savetemp" bindtap="agree" size="mini"  data-index="{{index}}" data-pid="{{pro.pid}}" data-openid="{{pro.openId}}" data-stats="">拒绝</button>
+</view>
+</view>
+</block>
+</view>

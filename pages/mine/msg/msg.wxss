@@ -1,0 +1,9 @@
+/* pages/mine/msg/msg.wxss */
+.mssage{
+    color: #666666;
+    border-bottom: 1rpx solid #d9d9d9;
+    font-size: 30rpx;
+    padding: 20rpx;
+    line-height: 1.2rem;
+    word-break: break-word;
+}

@@ -1,0 +1,10 @@
+<!--pages/index/buyedart/buyedart.wxml-->
+  <scroll-view class='scroll' style='width:{{width}}px;height:{{height}}px' scroll-y='true' bindscrolltolower="loadMore" lower-threshold="50">
+  <block wx:for="{{msgs}}" wx:for-item='msg' wx:key='msg.msgId'>
+    <view class='mssage'>{{msg.message}}</view>
+  </block>
+  <view class='loading' wx:if='{{showMore}}'>
+    正在加载...
+  </view>
+
+  </scroll-view>

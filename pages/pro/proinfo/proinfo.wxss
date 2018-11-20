@@ -1,0 +1,136 @@
+/* pages/pro/proinfo/proinfo.wxss */
+@import '../../../components/game/gameitem/game.wxss';
+
+page {
+  background-color: #fbf7ed;
+}
+
+.proinfo {
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 30rpx;
+}
+
+.proinfo .avator {
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.proinfo .avator image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.proinfo .nameinfo {
+  color: #36b9af;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+.proinfo .brief {
+  margin: 0 20rpx;
+  line-height: 1.1rem;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-indent: 2em;
+  color: #fff;
+  font-size: 28rpx;
+  opacity: 0.7;
+  margin-top: 10rpx;
+}
+
+.art {
+  padding: 0 20rpx;
+}
+
+.art .point {
+  height: 28rpx;
+  font-size: 26rpx;
+  color: #36b9af;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.point .circle {
+  height: 16rpx;
+  width: 16rpx;
+  border-radius: 16rpx;
+  display: inline-block;
+  border: 6rpx solid #36b9af;
+  margin-left: 10rpx;
+}
+
+.point .date {
+  margin-left: 6rpx;
+}
+
+.point  .game_type {
+  margin-left: 10rpx;
+}
+
+.art .vertical_line {
+  position: relative;
+  width: 6rpx;
+  height: 20rpx;
+  left: 21rpx;
+  background-color: #36b9af;
+}
+.art .vertical_line._bottom{
+   height: 40rpx;
+}
+.art .artcontent {
+  background-color: #fff;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.art .games {
+  padding-left: 14rpx;
+}
+
+.art .free_content {
+  color: #5c5c5c;
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+
+.art .free_content text {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: 1.2rem;
+}
+
+.scroll{
+  padding-bottom: 80rpx;
+}
+.bottombtn{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+    width: 100%;
+    height: 80rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 80rpx;
+}
+.bottombtn.uncollect{
+  background-color: #36b9af;
+  color: #fff;
+}
+.bottombtn.collect{
+      background-color: #e6e6e6;
+  color: #999999;
+  font-size: 24rpx;
+  opacity: .8;
+}

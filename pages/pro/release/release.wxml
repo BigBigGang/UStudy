@@ -1,0 +1,56 @@
+<import src='../../../components/myradio/myradio.wxml' />
+
+<!--pages/pro/release/release.wxml-->
+<view class='container'>
+  <view class='diveline'></view>
+  <view class='cell is_free'>
+    <view class='title'>收费文章:</view>
+    <template is='myradio' data="{{radios:fee,kind:'fee'}}" />
+    <input placeholder="8-99" maxlength="4" placeholder-class="placeholder" class='input money' type="digit" bindinput='priceInput' wx:if="{{!isFree}}" />
+  </view>
+  <view class='cell balltype'>
+    <view class='title'>文章分类:</view>
+    <template is='myradio' data="{{radios:ballType,kind:'ballType'}}" />
+  </view>
+  <view class='cell thetag'>
+    <view class='title'>相关标签:</view>
+    <template is='myradio' data="{{radios:gameType,kind:'gameType'}}" />
+  </view>
+  <view class='cell item' wx:if="{{haveGames == 2}}">
+  <view class='title'>竞彩赔率：</view>
+        <input placeholder="两比赛赔率≥1.8" maxlength="10" placeholder-class="placeholder" class='input' type="text" bindinput='oddsInput' />
+  </view>
+  <include src="../../../components/game/releasegame/releasegame.wxml" />
+  <view class='item freeart' wx:if="{{!isFree}}">
+    <view class="tagtitle">文章摘要</view>
+    <textarea placeholder="文章摘要——可免费观看(10-200字)" maxlength="200" placeholder-class="placeholder" class='multi_in' bindinput='freeContentInput' />
+  </view>
+  <view class='item contentart'>
+    <view class="tagtitle">文章内容</view>
+    <textarea placeholder="阐述您的观点" maxlength="-1" placeholder-class="placeholder" class='multi_in' bindinput='contentInput' />
+  </view>
+  <view class='item picture'>
+  <view class='emptyadd' bindtap='showpictures'></view>
+    <view class='tagtitle addpic' bindtap='showpictures'>添加相关图片
+      <image src="{{showPictures ? '../../../images/arrow_up.png' : '../../../images/arrow_down.png'}}" mode="aspectFit" />
+    </view>
+    <view class='pictures' wx:if='{{showPictures}}'>
+      <block wx:for='{{pictures}}' wx:for-item='picture' wx:key='*this'>
+      <view class='img'>
+       <image src="{{picture}}" mode="aspectFill"></image>
+       <icon type="clear" size="18" color="#333333" bindtap="deletePicture" data-id="{{index}}"></icon>
+      </view>
+      </block>
+      <view class='addpicture' bindtap='addpicture' wx:if="{{showAddPicture}}">
+        <view class='verlien'></view>
+        <view class='holline'></view>
+      </view>
+    </view>
+  </view>
+  <view class='btns'>
+    <button class='submit' hover-class="press_sub" bindtap="submit">发表文章</button>
+    <button class='save' bindtap="savetemp" wx:if=''>暂时保存</button>
+  </view>
+</view>
+<view class='notice' wx:if="{{inputnotice == '' ? false : true}}">*{{inputnotice}}</view>
+<include src="../../../components/pickertime/pickertime.wxml" />

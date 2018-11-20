@@ -1,0 +1,11 @@
+<!--pages/index/buyedart/buyedart.wxml-->
+<import src='../../../components/art/art.wxml' />
+  <scroll-view class='scroll' style='width:{{width}}px;height:{{height}}px' scroll-y='true' bindscrolltolower="loadMore" lower-threshold="50">
+  <block wx:for="{{arts}}" wx:for-item='art' wx:key='art.aid'>
+    <template is='art' data="{{art:art.art,gameType:''}}" />
+  </block>
+  <view class='loading' wx:if='{{showMore}}'>
+    正在加载...
+  </view>
+
+  </scroll-view>

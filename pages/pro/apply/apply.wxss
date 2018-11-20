@@ -1,0 +1,54 @@
+.input_cell{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 34rpx;
+    padding: 25rpx;
+}
+.input_cell .title{
+color: #666666;
+width: 120rpx;
+flex-shrink: 0;
+font-size: 30rpx;
+
+}
+.input_cell .in{
+    border-bottom: 1rpx solid #36b9af;
+    color: #36b9af;
+flex: 1;
+}
+.input_cell .placeholder{
+    color: #999999;
+    font-size: 28rpx;
+}
+
+.apply{
+    margin-top: 50rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    background-color: #ffffff;
+}
+
+.btn_hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.input_cell.input_area{
+        align-items: flex-start;
+}
+.input_area .in{
+    border:1rpx solid #36b9af;
+    padding: 10rpx;
+}
+
+.warn{
+    padding: 16rpx 25rpx;
+    color: red;
+    font-size: 28rpx;
+}
+.notice{
+    margin-top: 15rpx;
+    color: #999999;
+    font-size: 28rpx;
+    text-align: center;
+}

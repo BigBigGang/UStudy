@@ -1,0 +1,77 @@
+.container {
+}
+
+.cell {
+  background-color: #fff;
+  color: #353535;
+  font-size: 30rpx;
+  padding: 35rpx 0;
+}
+
+.userinfo {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #353535;
+  font-size: 30rpx;
+  padding: 25rpx;
+}
+
+.userinfo image {
+  width: 110rpx;
+  height: 110rpx;
+  display: inline-block;
+}
+
+.userinfo .infowrap {
+  margin-left: 15rpx;
+}
+
+.userinfo .usercode {
+  color: #999;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+.two_contain {
+  padding-left: 25rpx;
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+.two_contain .cell {
+  padding-left: 10rpx;
+}
+
+.two_contain .border_top {
+  border-top: 1rpx solid #d9d9d9;
+}
+
+.collected {
+}
+
+.message {
+}
+.cell.msg{
+    position: relative;
+}
+.cell.msg .point {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  margin-top: -5rpx;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  background-color: #36b9af;
+}
+
+.mypro {
+  margin-top: 30rpx;
+}
+
+.help {
+  margin-top: 30rpx;
+  padding-left: 35rpx;
+}

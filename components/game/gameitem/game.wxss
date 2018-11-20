@@ -1,0 +1,32 @@
+
+.game{
+    padding: 14rpx 0rpx;
+    border-bottom: 1rpx solid #f6f6f6;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.game .gamemsg{
+    color: #333333;
+    flex-shrink: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.game .gametiem{
+    color: #666666;
+    margin-left: 10rpx;
+    flex: 1;
+     white-space: nowrap;
+     font-size: 26rpx;
+}
+.game .is_end{
+    color: #999999;
+    flex-shrink: 0;
+       margin-left: 6rpx;
+       margin-right: 10rpx;
+       font-size: 26rpx;
+}

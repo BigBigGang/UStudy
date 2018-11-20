@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class='userinfo' bindtap='userinfo'>
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <view class='infowrap'>
+      <view class='username'>{{userInfo.nickName}}</view>
+      <view class='usercode'>玩球号：{{userInfo.uid}}</view>
+    </view>
+  </view>
+
+<view class='two_contain'>
+  <view class='cell buyed' bindtap='buyed'>我的购买</view>
+  <view class='cell border_top collect' bindtap='collected'>我的收藏</view>
+</view>
+
+
+
+
+<view class='two_contain' wx:if="{{pid == '' ? false:true}}">
+  <view class='cell pro' bindtap='myPro'>我是分析师</view>
+  <view class='cell border_top' bindtap='releaseArt'>发布文章</view>
+  <view class='cell border_top msg' bindtap='msgCenter'>消息中心<text class='point' wx:if="{{haveMsg}}"></text></view>
+
+  </view>
+  <view class='cell help'>客服与帮助</view>
+
+</view>

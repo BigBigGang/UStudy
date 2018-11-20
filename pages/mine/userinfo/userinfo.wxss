@@ -1,0 +1,85 @@
+/* pages/mine/userinfo/userinfo.wxss */
+
+.avtor{
+    background-color: #ffffff;
+    padding: 25rpx;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 30rpx;
+}
+
+.avtor .img{
+    width: 120rpx;
+    height: 120rpx;
+    display: inline-block;
+}
+
+.avtor .arrow{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.input_cell{
+    margin-top: 15rpx;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 34rpx;
+    padding: 25rpx;
+}
+.input_cell .title{
+color: #666666;
+width: 120rpx;
+flex-shrink: 0;
+font-size: 30rpx;
+}
+.input_cell .in{
+    border-bottom: 1rpx solid #36b9af;
+    color: #36b9af;
+flex: 1;
+}
+.input_cell .placeholder{
+    color: #999999;
+    font-size: 28rpx;
+}
+
+.save{
+    margin-top: 50rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    background-color: #ffffff;
+}
+
+.btn_hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.apply{
+    color: #36b9af;
+    font-size: 28rpx;
+    text-align: right;
+    margin-top: 15rpx;
+    margin-right: 18rpx;
+   
+}
+.apply text{
+     border-bottom: 1rpx solid #36b9af;
+
+      padding-bottom: 2rpx;
+}
+
+.notice{
+    color: red;
+    font-size: 26rpx;
+    margin-top: 6rpx;
+    margin-left: 30rpx;
+}
+
+.admin{
+    margin-top: 50rpx;
+    background-color: #36b9af;
+    color: #ffffff;
+    padding: 25rpx;
+    text-align: center;
+}

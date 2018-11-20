@@ -1,0 +1,24 @@
+<import src='../../components/art/art.wxml' />
+<view class='container'>
+<view class='btns'>
+  <view class="nav_btn {{gameType == '' ? 'selected' : ''}}" bindtap="navbtn" data-id=''>全部</view>
+  <view class="nav_btn {{gameType == '1' ? 'selected' : ''}}" bindtap="navbtn" data-id='1'>亚盘</view>
+  <view class="nav_btn {{gameType == '2' ? 'selected' : ''}}" bindtap="navbtn" data-id='2'>竞彩</view>
+  <view class="nav_btn {{gameType == '3' ? 'selected' : ''}}" bindtap="navbtn" data-id='3'>专栏</view>
+</view>
+<scroll-view class='scroll' style='width:{{width}}px;height:{{height-(85/pixelRatio)}}px' scroll-y='true' bindscrolltolower="loadMoreList" lower-threshold="300">
+  <view class='ball_btns' wx:if="{{ballType == '' ? false :true}}">
+    <view class="ballbtn left {{ballType == '1' ? 'selected' : ''}}" bindtap="ballBtn" data-id='1'>足球</view>
+    <view class="ballbtn right {{ballType == '2' ? 'selected' : ''}}" bindtap="ballBtn" data-id='2'>篮球</view>
+  </view>
+    <block wx:for="{{tops}}" wx:for-item='art' wx:key='art.aid' wx:if="{{gameType == '' ? true : false}}">
+    <template is='art' data="{{art:art,gameType:gameType,isTop:'1'}}" />
+  </block>
+  <block wx:for="{{arts}}" wx:for-item='art' wx:key='art.aid'>
+    <template is='art' data="{{art:art,gameType:gameType}}" />
+  </block>
+  <view class='loading' wx:if='{{showMore}}'>
+    正在加载...
+  </view>
+</scroll-view>
+</view>

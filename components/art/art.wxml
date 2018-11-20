@@ -1,0 +1,17 @@
+<import src='../game/gameitem/game.wxml' />
+<template name='art'>
+  <view class='art' bindtap="artinfo" data-id='{{art.aid}}'>
+    <view class='top'>
+      <image src="{{art.user.avatarUrl}}" mode="aspectFill"></image>
+      <view class='nickname'>{{art.user.nickName}}</view>
+      <view class='issue_time'>{{art.issueTime}}</view>
+      <view class='typemsg' wx:if="{{gameType == '' ? true : false}}">{{art.ballMsg}} {{art.gameMsg}}</view>
+      <view class='typemsg' wx:if="{{isTop == '1' ? true : fasle}}">置顶</view>
+    </view>
+    <view class='games' wx:if="{{art.gameOne == null ? false : true}}">
+      <template is='game' data="{{title:art.gameOne,date:art.oneTime,is_end:art.oneEnd}}" />
+      <template is='game' data="{{title:art.gameTwo,date:art.twoTime,is_end:art.twoEnd}}" />
+    </view>
+    <view class='free_content'><text style="-webkit-line-clamp:3">{{art.freeContent}}</text></view>
+  </view>
+  </template>

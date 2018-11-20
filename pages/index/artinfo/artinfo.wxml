@@ -1,0 +1,47 @@
+<view class='container' wx:if="{{art != '' ? true :false}}">
+  <view style='width:100%;height:70px;background-image:url("{{art.user.avatarUrl}}");background-repeat:no-repeat;background-size:400%;position:absolute;z-index:-1;opacity:1;filter:blur(21px);'></view>
+  <view class='proinfo' bindtap='proInfo' data-id="{{art.pid}}">
+    <image src="{{art.user.avatarUrl}}" mode="aspectFill"></image>
+    <view class='info_middle'>
+      <view class='nicknam'>{{art.user.nickName}}</view>
+      <view class='arts'>文章:{{art.pro.count}}
+        <text>最新文章:{{art.pro.latest}}</text>
+      </view>
+    </view>
+    <view class="atten_btn {{art.pro.attention == '' ? 'unselect' : 'select'}}" bindtap='changeAtten' data-atten="{{art.pro.attention}}">{{art.pro.attention == '' ? '关注' : '已关注'}}</view>
+  </view>
+  <view class='art'>
+    <view class='artinfo'>
+      <view class='game_type'>种类：{{art.gameType}}</view>
+      <view class='bottom_btn'>
+        <view class="collect {{art.collectId == '' ? 'uncoloct' : 'coloct'}}" bindtap="changeCollect" data-id="{{art.collectId}}">
+          {{art.collectId == '' ? '收藏' : '已收藏'}}
+        </view>
+        <view class='praise' bindtap="changePraise" data-id="{{art.praiseId}}">
+          <image src="{{art.praiseId == '' ? '../../../images/praise_.png' : '../../../images/praise.png'}}" mode="aspectFill"></image>
+          <text>{{art.praiseCount}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='issue_time'>发布于：{{art.issueTime}}</view>
+    <view class='game' wx:if="{{art.gameOne}}">赛事：{{art.gameOne}}
+      <text>{{art.oneTime}}</text>
+    </view>
+    <view class='game' wx:if="{{art.gameTwo}}">赛事：{{art.gameTwo}}
+      <text>{{art.twoTime}}</text>
+    </view>
+    <view class='freecontent' wx:if="{{art.freeContent != '' ? true : false}}">文章摘要：{{art.freeContent}}</view>
+    <view class='buyBtn' wx:if="{{art.seeAll != '1'}}" bindtap='goBuy'>
+      <view class='buy_title'>购买<text>(￥{{art.price}})</text>
+      </view>
+      <view class='buy_notice'>查看全部内容</view>
+    </view>
+    <view class='need_auth' wx:if="{{art.seeAll == '1'}}">
+      <view class='content'>{{art.content}}</view>
+      <block wx:for="{{art.pictures}}" wx:for-item='item' wx:key="*this">
+        <image src="{{item}}" mode="aspectFill" class='picture' bindtap='scanPicture' data-id="{{index}}"></image>
+      </block>
+      <view class='risktip'>观点仅供参考，投注有风险</view>
+    </view>
+  </view>
+</view>

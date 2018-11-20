@@ -1,0 +1,10 @@
+<template name='myradio'>
+  <view class='myradio'>
+    <block wx:for='{{radios}}' wx:for-item='radio' wx:key='radio.value'>
+      <view class='radio' bindtap='changeRadio' data-index='{{index}}' data-value = '{{radio.value}}' data-kind='{{kind}}'>
+        <icon type="{{radio.checked ? 'success_circle' : 'circle'}}" size="20" color="#36b9af"></icon>
+        <text>{{radio.name}}</text>
+      </view>
+    </block>
+  </view>
+</template>

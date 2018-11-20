@@ -1,0 +1,25 @@
+/* pages/mine/admin/admin.wxss */
+
+.pro{
+margin: 20rpx;
+border: 1rpx solid #888;
+background-color: #fff;
+padding: 10rpx;
+}
+.pro .msg{
+    font-size: 30rpx;
+    color: #666;
+}
+.pro .btns{
+    display: flex;
+    flex-direction: row;
+        font-size: 30rpx;
+    color: #666;
+    margin-top: 10rpx;
+}
+.pro .btns button{
+    flex: 1;
+}
+.pro .btns .ok{
+    margin-right: 20rpx;
+}

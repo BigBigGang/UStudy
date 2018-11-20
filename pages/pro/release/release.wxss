@@ -1,0 +1,203 @@
+/* pages/pro/release/release.wxss */
+@import '../../../components/myradio/myradio.wxss';
+@import '../../../components/pickertime/pickertime.wxss';
+/*公共部分*/
+.notice{
+    padding: 4rpx 10rpx;
+    color: #36b9af;
+    background-color: rgba(0, 0, 0, .6);
+    font-size: 30rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+}
+.cell{
+    background-color: #ffffff;
+    padding: 25rpx 15rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #666666;
+    font-size: 36rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+.cell .title{
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cell .input{
+    border: 1rpx solid #36b9af;
+    color: #36b9af;
+   display: inline-block;
+   padding: 6rpx;
+}
+.cell .placeholder{
+    color: #999999;
+    font-size: 30rpx;
+}
+.item{
+    background-color: #ffffff;
+    margin-top: 20rpx;
+}
+
+.cell.is_free .input{
+   width: 160rpx;
+   margin-left: 10rpx;
+   line-height: 42rpx;
+   height: 42rpx;
+   min-height: 42rpx;
+   vertical-align: middle;
+   
+}
+.diveline{
+    background-color: #36b9af;
+    height: 20rpx;
+    width: 100%;
+}
+.game .cell{
+      border-bottom: none;
+}
+.game{
+       border: 1rpx solid #d9d9d9;
+}
+.tagtitle{
+    background-color: #36b9af;
+    padding: 15rpx;
+    color: #666666;
+    font-size: 30rpx;
+}
+
+.freeart{
+    padding-bottom: 10rpx;
+}
+ .multi_in{
+    border:1rpx solid #36b9af;
+    padding: 10rpx;
+    color: #666666;
+    width: 700rpx;
+    margin: 10rpx auto;
+    border-radius: 4rpx;
+}
+
+.freeart .multi_in{
+  height: 120rpx;
+  margin-bottom: 0rpx;
+}
+ .placeholder{
+    color: #999999;
+    font-size: 28rpx;
+}
+
+.contentart{
+    padding-bottom: 10rpx;
+}
+ .contentart .multi_in{
+     min-height: 600rpx;
+     color: #666666;
+       margin-bottom: 0rpx;
+ }
+
+ .addpic{
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+ }
+ 
+  .addpic image{
+      width: 24rpx;
+      height: 24rpx;
+      margin-left: 10rpx;
+  }
+  .picture{
+      position: relative;
+  }
+.picture .emptyadd{
+    width: 100%;
+    height: 60rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.picture .pictures{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 14rpx;
+    margin-left: 54rpx;
+    margin-right: 54rpx;
+    padding-bottom: 14rpx;
+    }
+
+.picture .pictures .img{
+      width: 120rpx;
+    height: 120rpx;
+        margin-right: 50rpx;
+        position: relative;
+}
+.picture .pictures .img image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.picture .pictures .img icon{
+    position: absolute;
+    z-index: 10;
+    right: 0rpx;
+    top: 0rpx;
+}
+  .picture .addpicture{
+      height:100rpx;
+      width:100rpx;
+      padding: 20rpx;
+      border: 1rpx solid #36b9af;
+      position: relative;
+  }
+.picture .addpicture .verlien{
+background-color: #36b9af;
+height: 66rpx;
+width: 8rpx;
+position: absolute;
+left: 50%;
+top: 50%;
+margin-left: -4rpx;
+margin-top: -33rpx;
+}
+.picture .addpicture .holline{
+background-color: #36b9af;
+height: 8rpx;
+width: 66rpx;
+position: absolute;
+left: 50%;
+top: 50%;
+margin-left: -33rpx;
+margin-top: -4rpx;
+}
+
+.btns{
+    margin-top: 30rpx;
+    padding-bottom: 20rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+.btns .submit{
+    flex: 1;
+    background-color: #36b9af;
+    color: #ffffff;
+}
+.btns .press_sub{
+    background-color: #36c8bb;
+}
+.btns .save{
+flex: 1;
+    margin-left: 20rpx;
+}

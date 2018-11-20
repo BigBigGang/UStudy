@@ -1,0 +1,18 @@
+
+.myradio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        color: #666666;
+    font-size: 34rpx;
+}
+
+.myradio .radio{
+      display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.myradio .radio{
+       margin-left: 18rpx;
+}

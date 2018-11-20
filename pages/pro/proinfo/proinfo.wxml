@@ -1,0 +1,44 @@
+<import src='../../../components/game/gameitem/game.wxml' />
+
+<!--pages/pro/proinfo/proinfo.wxml-->
+  <scroll-view class='scroll' style='width:{{width}}px;height:{{height}}px' scroll-y='true' bindscrolltolower="loadMore" lower-threshold="50">
+<view class='container'>
+  <view class='proinfo'>
+    <view class='cover' style='width:100%;height:300rpx;position:absolute;z-index:-1;background-image:url("{{proInfo.user.avatarUrl}}");background-repeat:no-repeat;background-size:400%;opacity:1;filter:blur(25px);'></view>
+    <view class='avator'>
+      <image src="{{proInfo.user.avatarUrl}}" mode="aspectFill"></image>
+    </view>
+    <view class='nameinfo'>
+      {{proInfo.user.nickName}} | 文章:{{proInfo.count}}
+    </view>
+    <view class='brief'>{{proInfo.brief}}</view>
+  </view>
+  <view class='arts'>
+    <block wx:for="{{arts}}" wx:for-item='art' wx:key='art.aid'>
+      <view class='art'>
+        <view class='point'>
+          <text class='circle'></text>
+          <text class='date'>{{art.issueTime}}</text>
+          <text class='game_type'>{{art.gameMsg}}</text>
+        </view>
+        <view class='vertical_line'></view>
+        <view class='artcontent' bindtap='artInfo' data-id="{{art.aid}}">
+          <view class='games' wx:if="{{art.gameOne == null ? false : true}}">
+            <template is='game' data="{{title:art.gameOne,date:art.oneTime}}" />
+            <template is='game' data="{{title:art.gameTwo,date:art.twoTime}}" />
+          </view>
+          <view class='free_content'>
+            <text style="-webkit-line-clamp:3">{{art.freeContent}}</text>
+          </view>
+        </view>
+        <view class='vertical_line _bottom'></view>
+      </view>
+    </block>
+  </view>
+</view>
+    <view class='loading' wx:if='{{showLoadMore}}'>
+正在加载...
+</view>
+  </scroll-view>
+
+  <view class="bottombtn {{proInfo.attention == '' ? 'uncollect' : 'collect'}}" bindtap='changeAtten' data-id="{{proInfo.attention}}">{{proInfo.attention == '' ? '关注' : '已关注'}}</view>

@@ -1,0 +1,31 @@
+/**app.wxss**/
+page{
+    background-color: #f1f1f1;
+}
+.container {
+
+} 
+.loading {
+  color: #888;
+  font-size: 26rpx;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.atten_btn{
+    width: 120rpx;
+    height: 50rpx;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 50rpx;
+}
+.atten_btn.unselect{
+  background-color: #36b9af;
+  color: #fff;
+}
+.atten_btn.select{
+      background-color: #e6e6e6;
+  color: #999999;
+  font-size: 24rpx;
+}

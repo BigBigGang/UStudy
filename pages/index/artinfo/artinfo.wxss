@@ -1,0 +1,162 @@
+/* pages/index/artinfo/artinfo.wxss */
+page{
+    background-color: #f1f1f1;
+}
+
+.proinfo{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.proinfo image{
+    width: 84rpx;
+    height: 84rpx;
+    border-radius: 84rpx;
+    flex-shrink: 0;
+}
+.proinfo .info_middle{
+    flex: 1;
+    margin-left: 15rpx;
+    margin-right: 10rpx;
+    color:#ffffff;
+}
+.proinfo .info_middle .nicknam{
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.proinfo .info_middle .arts{
+    margin-top: 8rpx;
+    font-size: 26rpx;
+}
+.proinfo .info_middle .arts text{
+    margin-left: 10rpx;
+    font-size: 24rpx;
+}
+.proinfo .atten_btn{
+    flex-shrink: 0;
+}
+
+.art{
+    margin-top: 10rpx;
+    padding: 20rpx;
+    font-size: 30rpx;
+    color: #666666;
+    line-height: 1.4rem;
+}
+
+.art .artinfo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.art .artinfo .game_type{
+    flex: 1;
+}
+.art .artinfo .issue_time{
+
+}
+.art .game{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333333;
+}
+.art .game text{
+    font-size: 26rpx;
+}
+.art .freecontent{
+    margin-top: 10rpx;
+      word-break: break-word;
+      color: #444444;
+}
+
+.art .content{
+    margin-top: 10rpx;
+    word-break: break-word;
+    text-indent: 2em; 
+}
+.art .picture{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bottom_btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.bottom_btn .collect {
+    width: 100rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    border-radius: 6rpx;
+    line-height: 40rpx;
+    text-align: center;
+}
+.bottom_btn .collect.uncoloct{
+    color: #ffffff;
+    background-color: #ff9d09;
+}
+.bottom_btn .collect.coloct{
+    color: #888888;
+   border: 1rpx solid #888888;
+}
+.bottom_btn .praise{
+      width: 100rpx;
+    height: 40rpx;
+     font-size: 24rpx;
+    border-radius: 6rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border: 1rpx solid #a4a4a4;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom_btn .praise image{
+    width: 32rpx;
+    height: 32rpx;
+    display: block;
+}
+.bottom_btn .praise text{
+    margin-left: 10rpx;
+}
+
+.risktip{
+    color: #666666;
+    text-align: center;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+}
+
+.buyBtn{
+    background-color: #36b9af;
+    opacity: .7;
+    width: 400rpx;
+    border-radius: 16rpx;
+    text-align: center;
+    color: #ffffff;
+    font-size: 36rpx;
+    margin: 30rpx auto;
+   padding: 65rpx 0;
+}
+
+.buyBtn .buy_title{
+font-weight: bold;
+}
+.buyBtn .buy_title text{
+font-size: 28rpx;
+font-weight: normal;
+}
+.buyBtn .buy_notice{
+    margin-right: 10rpx;
+    font-size: 26rpx;
+    color: #666666;
+}

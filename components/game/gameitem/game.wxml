@@ -1,0 +1,7 @@
+<template name='game'>
+<view class='game'  wx:if="{{title == null ? false : true}}">
+<view class='gamemsg'>{{title}}</view>
+<view class='gametiem'>{{date}}</view>
+<view class='is_end' wx:if="{{is_end =='1' ? true : false}}">已完场</view>
+</view>
+</template>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/artinfo/artinfo",
+    "pages/index/buyedart/buyedart",
+    "pages/mine/mine",
+    "pages/mine/admin/admin",
+    "pages/pro/pro",
+    "pages/pro/proinfo/proinfo",
+    "pages/pro/mypro/mypro",
+    "pages/mine/userinfo/userinfo",
+    "pages/mine/msg/msg",
+    "pages/pro/apply/apply",
+    "pages/pro/release/release",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#393a3f",
+    "navigationBarTitleText": "玩球",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#EBEBEB"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#36b9af",
+    "backgroundColor": "#fcfcfc",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_press.png"
+      },
+      {
+        "pagePath": "pages/pro/pro",
+        "text": "专家",
+        "iconPath": "images/pro.png",
+        "selectedIconPath": "images/pro_press.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_press.png"
+      }
+    ]
+  }
+}

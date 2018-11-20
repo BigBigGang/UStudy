@@ -1,0 +1,22 @@
+<view class="item game" wx:if="{{haveGames != 0}}">
+  <view class="tagtitle game_title" wx:if="false">{{haveGames == 1 ?'比赛信息' : '第一场比赛'}}</view>
+  <view class="cell">
+    <view class='title'>赛事信息：</view>
+    <input placeholder="英超 切尔西VS阿森纳" maxlength="80" placeholder-class="placeholder" class='input' type="text" bindinput='gameOneInput' />
+  </view>
+  <view class="cell">
+    <view class='title'>比赛时间：</view>
+    <input placeholder="" maxlength="20" placeholder-class="placeholder" class='input' type="text" bindinput='bindMoneyInput' disabled='false' bindtap='oneTime' value="{{oneTime}}" />
+  </view>
+  <view class='gametwo' wx:if="{{haveGames == 2}}">
+    <view class="tagtitle game_title" wx:if="false">第二场比赛</view>
+    <view class="cell">
+      <view class='title'>赛事信息：</view>
+      <input placeholder="" maxlength="80" placeholder-class="placeholder" class='input' type="text" bindinput='gameTwoInput' />
+    </view>
+    <view class="cell">
+      <view class='title'>比赛时间：</view>
+      <input placeholder="英超 切尔西VS阿森纳" maxlength="20" placeholder-class="placeholder" class='input' type="text" bindinput='bindMoneyInput' disabled='false' bindtap='twoTime' value="{{twoTime}}" />
+    </view>
+  </view>
+</view>

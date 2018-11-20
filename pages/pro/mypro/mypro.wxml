@@ -1,0 +1,44 @@
+<!--pages/pro/mypro/mypro.wxml-->
+  <scroll-view class='scroll' style='width:{{width}}px;height:{{height}}px' scroll-y='true' bindscrolltolower="loadMore" lower-threshold="50">
+<view class='container'>
+  <view class='proinfo'>
+    <view class='cover' style='width:100%;height:270rpx;position:absolute;z-index:-1;background-image:url("{{proInfo.user.avatarUrl}}");background-repeat:no-repeat;background-size:400%;opacity:1;filter:blur(25px);'></view>
+    <view class='detail'>
+     <view class='avator'>
+      <image src="{{proInfo.user.avatarUrl}}" mode="aspectFill"></image>
+    </view>
+    <view class='nameinfo'>
+    <view class='nicknam'>{{proInfo.user.nickName}}</view>
+    <view class='fans'>文章:{{proInfo.count}} | 粉丝:{{proInfo.fans}}</view>
+    </view>
+    </view>
+    <view class='brief'><text>{{proInfo.brief}}</text></view>
+  </view>
+  <view class='arts'>
+    <block wx:for="{{arts}}" wx:for-item='art' wx:key='art.aid'>
+      <view class='art'>
+        <view class='point'>
+          <text class='circle'></text>
+          <text class='date'>{{art.issueTime}}</text>
+        </view>
+        <view class='vertical_line'></view>
+        <view class='artcontent' bindtap='artInfo' data-id="{{art.aid}}">
+      <view class='title'>
+      <text class='code'>编号:<text style="font-size:30rpx;">{{art.aid}}</text></text> 
+      <text wx:if="{{art.needMoney == '1'}}" class='price'>价格:￥{{art.price}}</text>
+      <text wx:if="{{art.needMoney != '1'}}" class='price'>免费</text>
+      <text wx:if="{{art.needMoney == '1'}}" class='selled'>已售:<text style="font-size:30rpx;">{{art.selled}}</text></text>
+      </view>
+          <view class='free_content'>
+            <text style="-webkit-line-clamp:3">{{art.freeContent}}</text>
+          </view>
+        </view>
+        <view class='vertical_line _bottom'></view>
+      </view>
+    </block>
+  </view>
+</view>
+    <view class='loading' wx:if='{{showLoadMore}}'>
+正在加载...
+</view>
+  </scroll-view>
