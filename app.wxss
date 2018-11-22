@@ -1,12 +1,13 @@
 /**app.wxss**/
 page{
-    background-color: #f1f1f1;
+    background-color: #FF9900;
 }
 .container {
-
+  position:absolute;
+  top:150px
 } 
 .loading {
-  color: #888;
+  color: #FF9900;
   font-size: 26rpx;
   text-align: center;
   padding: 30rpx 0;

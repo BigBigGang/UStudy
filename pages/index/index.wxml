@@ -1,11 +1,24 @@
 <import src='../../components/art/art.wxml' />
-<view class='container'>
+<view class="swipper">
+<view>
+<swiper indicator-dots="{{indicatorDots}}" 
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" width="100%" height="50%"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
 <view class='btns'>
   <view class="nav_btn {{gameType == '' ? 'selected' : ''}}" bindtap="navbtn" data-id=''>全部</view>
-  <view class="nav_btn {{gameType == '1' ? 'selected' : ''}}" bindtap="navbtn" data-id='1'>亚盘</view>
-  <view class="nav_btn {{gameType == '2' ? 'selected' : ''}}" bindtap="navbtn" data-id='2'>竞彩</view>
-  <view class="nav_btn {{gameType == '3' ? 'selected' : ''}}" bindtap="navbtn" data-id='3'>专栏</view>
+  <view class="nav_btn {{gameType == '1' ? 'selected' : ''}}" bindtap="navbtn" data-id='1'>娱乐</view>
+  <view class="nav_btn {{gameType == '2' ? 'selected' : ''}}" bindtap="navbtn" data-id='2'>动脑</view>
+  <view class="nav_btn {{gameType == '3' ? 'selected' : ''}}" bindtap="navbtn" data-id='3'>益智</view>
 </view>
+</view>
+<view class='container'>
+
 <scroll-view class='scroll' style='width:{{width}}px;height:{{height-(85/pixelRatio)}}px' scroll-y='true' bindscrolltolower="loadMoreList" lower-threshold="300">
   <view class='ball_btns' wx:if="{{ballType == '' ? false :true}}">
     <view class="ballbtn left {{ballType == '1' ? 'selected' : ''}}" bindtap="ballBtn" data-id='1'>足球</view>
